@@ -34,7 +34,7 @@
                     ★ ★ ★ ★ ★
                 </div>
                 <h1>
-                    Verblijf in het beste hotel<br>
+                    Verblijf in het beste hotel
                     van Gouda
                 </h1>
                 <p class="hero-intro">

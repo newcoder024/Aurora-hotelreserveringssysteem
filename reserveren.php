@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="nl">
 <head>
@@ -7,23 +9,6 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<?php
-
-$db_host = "localhost";
-$db_gebruiker = "root";       // standaard bij XAMPP: "root"
-$db_wachtwoord = "";          // standaard bij XAMPP: leeg
-$db_naam = "aurora";
-
-$conn = mysqli_connect($db_host, $db_gebruiker, $db_wachtwoord, $db_naam);
-
-if (!$conn) {
-    die("Verbinding met database mislukt: " . mysqli_connect_error());
-}
-
-// Zorgt dat speciale tekens (zoals é, ë) goed worden opgeslagen
-mysqli_set_charset($conn, "utf8mb4");
-?>
 
 <header class="site-header">
   <div class="brand">
@@ -41,11 +26,15 @@ mysqli_set_charset($conn, "utf8mb4");
   </nav>
 </header>
 
+<?php if (isset($_GET["gelukt"])): ?>
+  <p class="form-succes">Bedankt! Je reservering is ontvangen. Je krijgt binnenkort een bevestiging via email.</p>
+<?php endif; ?>
+
 <main class="page">
   <h2 class="page-title">Reserverings-formulier</h2>
 
   <div class="form-card">
-    <form action="verwerk_reservering.php" method="post">
+    <form action="reservering-db.php" method="post">
 
       <div class="form-row two-col">
         <div class="field">
@@ -108,8 +97,7 @@ mysqli_set_charset($conn, "utf8mb4");
           <label for="kamer">Gekozen kamer *</label>
           <select id="kamer" name="kamer" required>
             <option value="eenpersoons">Eenpersoonskamer</option>
-            <option value="tweepersoons" selected>Standaard kamer</option>
-            <option value="suite">Suite</option>
+            <option value="tweepersoons" selected>Tweepersoonskamer</option>
           </select>
         </div>
         <div class="field">

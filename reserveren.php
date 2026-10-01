@@ -8,6 +8,23 @@
 </head>
 <body>
 
+<?php
+
+$db_host = "localhost";
+$db_gebruiker = "root";       // standaard bij XAMPP: "root"
+$db_wachtwoord = "";          // standaard bij XAMPP: leeg
+$db_naam = "aurora";
+
+$conn = mysqli_connect($db_host, $db_gebruiker, $db_wachtwoord, $db_naam);
+
+if (!$conn) {
+    die("Verbinding met database mislukt: " . mysqli_connect_error());
+}
+
+// Zorgt dat speciale tekens (zoals é, ë) goed worden opgeslagen
+mysqli_set_charset($conn, "utf8mb4");
+?>
+
 <header class="site-header">
   <div class="brand">
     <a href="index.php" class="brand-name">Aurora</a>

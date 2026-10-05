@@ -671,7 +671,283 @@ input::placeholder {
 }
 
 
-/* --- RESPONSIVE --- */
+/* ========================================
+   CONTACT PAGINA
+======================================== */
+
+.contact-hero {
+    min-height: 292px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #F7F5F1;
+    border-bottom: 1px solid var(--border-light);
+
+    text-align: center;
+}
+
+.contact-hero-content {
+    margin-top: -5px;
+}
+
+.contact-label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #6F6B65;
+
+    font-size: 13px;
+    letter-spacing: 1.2px;
+}
+
+.contact-hero h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.contact-hero p {
+    margin: 14px 0 0;
+
+    color: #686868;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACT INFORMATIE
+======================================== */
+
+.contact-section {
+    min-height: 665px;
+
+    background: #FAF9F7;
+
+    padding: 92px 24px 80px;
+}
+
+.contact-container {
+    max-width: 1165px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+
+/* Links */
+
+.contact-info {
+    padding-right: 60px;
+}
+
+.contact-info h2 {
+    margin: 0 0 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    margin-bottom: 24px;
+}
+
+.contact-icon {
+    width: 32px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: var(--gold);
+
+    font-size: 22px;
+    line-height: 1;
+}
+
+.contact-item-title {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #77736D;
+
+    font-size: 11px;
+    letter-spacing: 1.4px;
+}
+
+.contact-item p {
+    margin: 0;
+
+    color: #1A1A1A;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contact-line {
+    height: 1px;
+
+    margin: 39px 0 40px;
+
+    background: var(--border);
+}
+
+
+/* Check-in / check-out */
+
+.check-info h3 {
+    margin: 0 0 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.check-columns {
+    display: flex;
+
+    gap: 52px;
+}
+
+.check-columns span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #77736D;
+
+    font-size: 11px;
+    letter-spacing: 1.3px;
+}
+
+.check-columns p {
+    margin: 0;
+
+    color: #1A1A1A;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CONTACT FORMULIER
+======================================== */
+
+.contact-form {
+    padding-left: 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.contact-form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 23px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-field label {
+    margin-bottom: 8px;
+
+    color: #6F6B65;
+
+    font-size: 11px;
+    letter-spacing: 1.3px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+
+    border: 1px solid #DEDAD2;
+    border-radius: 0;
+
+    background: #FAF9F7;
+
+    color: #1A1A1A;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.contact-field input {
+    height: 45px;
+
+    padding: 0 14px;
+}
+
+.contact-field textarea {
+    height: 159px;
+
+    padding: 14px;
+
+    resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #92908B;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #A9A49A;
+}
+
+
+/* Verstuur knop */
+
+.contact-submit {
+    width: 255px;
+    height: 51px;
+
+    margin-top: 7px;
+
+    border: none;
+
+    background: #191919;
+    color: white;
+
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.contact-submit:hover {
+    background: #000000;
+}
 
 @media (max-width: 860px) {
 
@@ -737,6 +1013,20 @@ input::placeholder {
   .field-narrow {
     max-width: 100%;
   }
+
+  .contact-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 }
 
 
@@ -813,6 +1103,36 @@ input::placeholder {
   .room-info {
     padding: 25px;
   }
+
+  .contact-hero {
+        min-height: 260px;
+
+        padding: 40px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 38px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+    }
+
+    .contact-hero p br {
+        display: none;
+    }
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        gap: 50px;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
 
   .footer-nav {
     gap: 15px;

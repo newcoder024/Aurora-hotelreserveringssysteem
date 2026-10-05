@@ -17,17 +17,17 @@ if (!$conn) {
 mysqli_set_charset($conn, "utf8mb4");
 
 // formulierwaardes 
-$naam          = trim($_POST["naam"] ?? "");
-$achternaam    = trim($_POST["achternaam"] ?? "");
-$email         = trim($_POST["email"] ?? "");
-$telefoon      = trim($_POST["telefoon"] ?? "");
-$volwassenen   = ($_POST["volwassenen"] ?? "") !== "" ? (int)$_POST["volwassenen"] : 1;
-$kinderen      = ($_POST["kinderen"] ?? "") !== "" ? (int)$_POST["kinderen"] : 0;
-$huisdieren    = ($_POST["huisdieren"] ?? "") !== "" ? $_POST["huisdieren"] : "nee";
-$kamer         = $_POST["kamer"] ?? "";
+$naam = trim($_POST["naam"] ?? "");
+$achternaam = trim($_POST["achternaam"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$telefoon = trim($_POST["telefoon"] ?? "");
+$volwassenen = ($_POST["volwassenen"] ?? "") !== "" ? (int)$_POST["volwassenen"] : 1;
+$kinderen = ($_POST["kinderen"] ?? "") !== "" ? (int)$_POST["kinderen"] : 0;
+$huisdieren = ($_POST["huisdieren"] ?? "") !== "" ? $_POST["huisdieren"] : "nee";
+$kamer = $_POST["kamer"] ?? "";
 $aantal_kamers = (int)($_POST["aantal_kamers"] ?? 1);
 $aankomstdatum = $_POST["aankomstdatum"] ?? "";
-$vertrekdatum  = $_POST["vertrekdatum"] ?? "";
+$vertrekdatum = $_POST["vertrekdatum"] ?? "";
 
 // controleren voor fouten
 $fouten = [];
